@@ -13,7 +13,7 @@ pipeline {
         sh "echo 'http://dl-cdn.alpinelinux.org/alpine/v3.6/community' >> /etc/apk/repositories"
         sh "apk update"
         sh "apk add mongodb"
-        sh "sudo systemctl enable mongodb"
+        sh "systemctl enable mongodb"
         sh "chmod +x ./scripts/dropdb.sh"
         sh "npm install"
       }
